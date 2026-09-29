@@ -36,3 +36,5 @@ next-env.d.ts
 
 # agent metadata
 .agents/
+.claude/
+skills-lock.json
