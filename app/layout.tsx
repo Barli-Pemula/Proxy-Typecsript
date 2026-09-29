@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, Inter, Caveat } from 'next/font/google';
+import { DM_Sans, Outfit, Caveat } from 'next/font/google';
 import './globals.css';
 
-const plusJakarta = Plus_Jakarta_Sans({
+const outfit = Outfit({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
   variable: '--font-heading',
   display: 'swap',
 });
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-body',
@@ -41,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`${plusJakarta.variable} ${inter.variable} ${caveat.variable}`}>
+    <html lang="id" className={`${outfit.variable} ${dmSans.variable} ${caveat.variable}`}>
       <body className="antialiased min-h-screen flex flex-col text-comic-text selection:bg-secondary">
         {children}
       </body>

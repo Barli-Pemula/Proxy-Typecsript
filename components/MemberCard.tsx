@@ -9,7 +9,6 @@ import {
   Cake,
   GraduationCap,
   UtensilsCrossed,
-  FileText,
   Pencil,
   Quote,
 } from 'lucide-react';
@@ -84,16 +83,6 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
 
               {/* Action Buttons */}
               <div className="flex items-center gap-2">
-                <a
-                  href={member.cvUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-surface text-comic-text px-4 py-2 rounded-comic-sm border-2 border-comic-border shadow-comic-sm text-xs font-heading font-bold hover:bg-secondary/30 active:translate-y-0.5 transition-all"
-                  aria-label={`Lihat CV ATS ${member.name}`}
-                >
-                  <FileText className="w-4 h-4 text-primary" />
-                  Lihat CV (ATS)
-                </a>
                 <button
                   type="button"
                   onClick={() => onEditClick(member)}
@@ -172,16 +161,6 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
 
               {/* Action Buttons */}
               <div className="flex items-center gap-2">
-                <a
-                  href={member.cvUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-surface text-comic-text px-3.5 py-1.5 rounded-comic-sm border-2 border-comic-border shadow-comic-sm text-xs font-heading font-bold hover:bg-primary/20 active:translate-y-0.5 transition-all"
-                  aria-label={`Lihat CV ATS ${member.name}`}
-                >
-                  <FileText className="w-3.5 h-3.5 text-primary" />
-                  Lihat CV
-                </a>
                 <button
                   type="button"
                   onClick={() => onEditClick(member)}
@@ -234,16 +213,6 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
           </span>
 
           <div className="flex items-center gap-1.5">
-            <a
-              href={member.cvUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-1.5 rounded-comic-sm bg-cream border border-comic-border text-comic-text hover:bg-secondary/30 active:translate-y-0.5 transition-all"
-              title="Lihat CV ATS"
-              aria-label={`Lihat CV ATS ${member.name}`}
-            >
-              <FileText className="w-3.5 h-3.5 text-primary" />
-            </a>
             <button
               type="button"
               onClick={() => onEditClick(member)}
@@ -258,7 +227,7 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
 
         {/* Centered Avatar */}
         <div className="flex flex-col items-center text-center">
-          <div className="w-20 h-20 rounded-full bg-cream border-comic border-comic-border overflow-hidden shadow-comic-sm group-hover:scale-105 transition-transform mb-2">
+          <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-comic-sm bg-cream border-comic border-comic-border overflow-hidden shadow-comic-sm group-hover:scale-105 transition-transform mb-3">
             <img
               src={member.avatarUrl}
               alt={member.name}
