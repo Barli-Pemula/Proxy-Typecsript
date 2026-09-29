@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Lightbulb, Rocket, ShieldCheck, Flame, Users, Calendar, Award, Code2 } from 'lucide-react';
+import { Lightbulb, Rocket, ShieldCheck, Flame, Users, Calendar, Infinity as InfinityIcon, Code2 } from 'lucide-react';
 
 export default function About() {
   const values = [
@@ -12,51 +12,51 @@ export default function About() {
       color: 'bg-primary/20 text-primary',
     },
     {
-      title: 'Standar Kode Presisi',
-      description: 'Menjunjung arsitektur clean code, type safety yang ketat, serta automated testing teruji.',
+      title: 'Belajar bareng, tumbuh bareng',
+      description: 'Saling berbagi cara berpikir, membedah masalah, dan merayakan progres kecil dalam perjalanan menjadi engineer.',
       icon: ShieldCheck,
       color: 'bg-secondary/30 text-comic-text',
     },
     {
-      title: 'Inovasi & Daya Cipta',
-      description: 'Mengeksplorasi teknologi terdepan untuk menghadirkan solusi digital yang relevan dan bernilai.',
+      title: 'Seru dalam prosesnya',
+      description: 'Eksperimen, diskusi, dan proyek kecil kami jadikan ruang aman untuk mencoba hal baru tanpa takut salah.',
       icon: Flame,
       color: 'bg-accent/20 text-accent',
     },
   ];
 
   const stats = [
-    { label: 'Talenta Terpilih', value: '12', icon: Users, suffix: 'Engineer' },
-    { label: 'Tahun Terbentuk', value: '2024', icon: Calendar, suffix: 'Aktif' },
-    { label: 'Proyek Selesai', value: '15+', icon: Award, suffix: 'Karya' },
+    { label: 'Talenta masa depan', value: '12', icon: Users, suffix: 'Calon Engineer' },
+    { label: 'Tahun perjalanan', value: '2026', icon: Calendar, suffix: 'Bertumbuh' },
+    { label: 'Momen yang terukir', value: '∞', icon: InfinityIcon, suffix: 'Kenangan terbentuk' },
   ];
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <section id="about" className="py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Section Header */}
       <div className="text-center space-y-3 mb-16">
-        <div className="inline-block bg-accent/20 text-accent px-4 py-1 rounded-comic-pill border border-comic-border text-sm font-heading font-bold">
-          Profil &amp; Eksplorasi
+        <div className="inline-block bg-primary-light text-primary px-4 py-1 rounded-comic-pill border border-primary/20 text-xs font-heading font-bold tracking-[0.14em] uppercase">
+          Cara kami bekerja
         </div>
-        <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-comic-text tracking-tight">
+        <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-comic-text tracking-[-0.04em]">
           Tentang Proxy Typescript
         </h2>
         <p className="font-body text-comic-muted text-base sm:text-lg max-w-2xl mx-auto">
-          Unit rekayasa perangkat lunak yang berfokus pada kolaborasi intensif, penyusunan arsitektur sistem tangguh, dan pengembangan kapabilitas talenta digital.
+          Ruang untuk belajar, bercanda, mencoba, dan tumbuh bersama sebagai Proxy. Kami hadir sebagai kelompok yang saling menguatkan dalam perjalanan menjadi talenta digital masa depan.
         </p>
       </div>
 
       {/* Description & Story Blocks */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
-        <div className="lg:col-span-7 space-y-5 bg-surface p-6 sm:p-8 rounded-comic border-comic border-comic-border shadow-comic">
+        <div className="lg:col-span-7 space-y-5 bg-surface/85 p-6 sm:p-9 rounded-comic border border-comic-border/20 shadow-comic">
           <h3 className="font-heading font-bold text-2xl text-comic-text flex items-center gap-2">
-            <Code2 className="w-6 h-6 text-primary" /> Fondasi &amp; Visi Pengembangan
+            <Code2 className="w-6 h-6 text-primary" /> Fondasi kebersamaan
           </h3>
           <p className="font-body text-comic-text/85 text-base leading-relaxed">
-            <strong>Proxy Typescript</strong> dibentuk sebagai unit kerja kolaboratif untuk mempercepat penguasaan teknologi modern. Kami percaya bahwa keandalan sistem berakar dari pondasi logika yang kokoh dan disiplin arsitektur yang konsisten.
+            <strong>Proxy Typescript</strong> bukan perusahaan dan bukan sekadar nama kelompok. Proxy adalah tempat kami bertemu, bertukar cerita, mengerjakan tantangan, dan menemukan versi diri yang lebih berani untuk belajar teknologi.
           </p>
           <p className="font-body text-comic-text/85 text-base leading-relaxed">
-            Dibimbing secara strategis oleh <strong>1 Lead Mentor</strong>, dipimpin secara adaptif oleh <strong>1 Ketua Proxy</strong>, dan diperkuat oleh <strong>10 Anggota Inti</strong> lintas keahlian rekayasa perangkat lunak, kami berkolaborasi memecahkan tantangan komputasi nyata.
+            Bersama <strong>1 PJK Proxy</strong>, <strong>1 Ketua Proxy</strong>, dan <strong>10 anggota inti</strong>, kami membangun kebiasaan kolaborasi yang hangat: diskusi yang hidup, kerja kelompok yang kompak, dan kenangan yang terus bertambah.
           </p>
         </div>
 
@@ -72,11 +72,14 @@ export default function About() {
                 <div className="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center border-2 border-comic-border shrink-0">
                   <Icon className="w-7 h-7 text-comic-text" />
                 </div>
-                <div>
-                  <div className="font-heading font-extrabold text-3xl text-comic-text">
-                    {st.value} <span className="text-sm font-body text-comic-muted font-normal">({st.suffix})</span>
+                <div className="min-w-0">
+                  <div className={`font-heading font-extrabold text-comic-text ${st.value === '∞' ? 'text-6xl leading-[0.8] tracking-[-0.08em] text-primary' : 'text-3xl leading-none'}`}>
+                    {st.value}
                   </div>
-                  <div className="font-heading font-semibold text-sm text-comic-muted">
+                  <div className="mt-1 max-w-[18ch] font-body text-xs font-semibold leading-snug text-comic-muted">
+                    {st.suffix}
+                  </div>
+                  <div className="mt-1 font-heading text-sm font-semibold leading-snug text-comic-muted">
                     {st.label}
                   </div>
                 </div>
@@ -87,7 +90,7 @@ export default function About() {
       </div>
 
       {/* Vision & Mission Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
         {/* Visi */}
         <div className="bg-surface p-8 rounded-comic border-comic border-comic-border shadow-comic hover:shadow-comic-md transition-all relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-24 h-24 bg-secondary/30 rounded-bl-[60px] -z-0"></div>
@@ -99,7 +102,7 @@ export default function About() {
               Visi Proxy
             </h3>
             <p className="font-body text-comic-text/85 text-base leading-relaxed">
-              Menjadi tim rekayasa perangkat lunak unggulan yang melahirkan solusi digital berdaya guna tinggi, menerapkan standar industri terdepan, serta mencetak talenta engineer berkualifikasi profesional.
+              Menjadi kelompok yang membuat proses belajar teknologi terasa lebih dekat, menyenangkan, dan berarti bagi setiap calon engineer di dalamnya.
             </p>
           </div>
         </div>
@@ -115,9 +118,9 @@ export default function About() {
               Misi Proxy
             </h3>
             <ul className="font-body text-comic-text/85 text-sm sm:text-base space-y-2.5 list-disc list-inside">
-              <li>Menyelenggarakan asistensi dan review teknis berkala bersama mentor.</li>
-              <li>Membangun serta merawat produk digital berbasis arsitektur terdistribusi.</li>
-              <li>Menerapkan prinsip keamanan, maintainability, dan automated testing terintegrasi.</li>
+              <li>Berani bertanya, berbagi ilmu, dan saling membantu saat menemui jalan buntu.</li>
+              <li>Mengerjakan tantangan dan proyek kelompok dengan komunikasi yang terbuka.</li>
+              <li>Mengubah setiap pertemuan menjadi pengalaman, pembelajaran, dan cerita baru.</li>
             </ul>
           </div>
         </div>
@@ -125,7 +128,7 @@ export default function About() {
 
       {/* Core Values */}
       <div className="space-y-6">
-        <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-comic-text text-center tracking-tight">
+        <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-comic-text text-center tracking-[-0.03em]">
           Prinsip &amp; Nilai Utama
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">

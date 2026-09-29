@@ -4,6 +4,16 @@ import { supabase, isSupabaseConfigured } from './supabase';
 
 const STORAGE_KEY = 'typescript_web_members_v1';
 
+function applyCurrentRoleTitles(members: Member[]): Member[] {
+  const defaults = defaultMembers as Member[];
+  const roleTitles = new Map(defaults.map((member) => [member.id, member.roleTitle]));
+
+  return members.map((member) => ({
+    ...member,
+    roleTitle: roleTitles.get(member.id) || member.roleTitle,
+  }));
+}
+
 export async function getMembers(): Promise<Member[]> {
   if (typeof window === 'undefined') {
     return defaultMembers as Member[];
@@ -18,7 +28,7 @@ export async function getMembers(): Promise<Member[]> {
         .order('tier', { ascending: true });
 
       if (!error && data && data.length > 0) {
-        return data as Member[];
+        return applyCurrentRoleTitles(data as Member[]);
       }
     } catch (e) {
       console.warn('Supabase fetch failed, falling back to localStorage/JSON', e);
@@ -31,7 +41,7 @@ export async function getMembers(): Promise<Member[]> {
     if (localData) {
       const parsed = JSON.parse(localData);
       if (Array.isArray(parsed) && parsed.length > 0) {
-        return parsed;
+        return applyCurrentRoleTitles(parsed);
       }
     }
   } catch (e) {

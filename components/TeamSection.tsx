@@ -44,29 +44,29 @@ export default function TeamSection() {
   };
 
   return (
-    <section id="team" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <section id="team" className="py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Header */}
       <div className="text-center space-y-3 mb-16">
-        <div className="inline-flex items-center gap-1.5 bg-primary/20 text-primary px-4 py-1 rounded-comic-pill border border-comic-border text-sm font-heading font-bold">
+        <div className="inline-flex items-center gap-1.5 bg-primary-light text-primary px-4 py-1 rounded-comic-pill border border-primary/20 text-xs font-heading font-bold tracking-[0.14em] uppercase">
           <Shield className="w-4 h-4" />
-          Struktur Tim 3-Tier
+          Struktur Kelompok
         </div>
-        <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-comic-text flex items-center justify-center gap-2 tracking-tight">
-          Struktur Proxy Typescript
+        <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-comic-text flex items-center justify-center gap-2 tracking-[-0.04em]">
+          Orang-orang di balik Proxy
           <Sparkles className="w-6 h-6 text-secondary hidden sm:inline-block" />
         </h2>
         <p className="font-body text-comic-muted text-base sm:text-lg max-w-2xl mx-auto">
-          Struktur 12 talenta teknologi yang solid dan terkoordinasi. Klik tombol edit pada kartu untuk memperbarui profil (dilindungi 4-digit PIN).
+          Dua belas calon engineer yang belajar, bekerja kelompok, dan bertumbuh bersama. Klik tombol edit pada kartu untuk memperbarui profil (dilindungi 4-digit PIN).
         </p>
       </div>
 
       <div className="space-y-12">
-        {/* Tier 1: Lead Mentor */}
+        {/* Tier 1: PJK Proxy */}
         <div className="space-y-4">
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-secondary border border-comic-border"></span>
             <h3 className="font-heading font-extrabold text-xl text-comic-text tracking-tight">
-              Tier 1 — Lead Mentor &amp; Technical Advisor
+              Tier 1 — PJK Proxy
             </h3>
           </div>
           {mentor && (

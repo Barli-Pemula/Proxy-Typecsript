@@ -24,14 +24,14 @@ export default function PhotoGallery({ initialItems = defaultGallery as GalleryI
   } = useLightbox(initialItems);
 
   return (
-    <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <section id="gallery" className="py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Header */}
       <div className="text-center space-y-3 mb-16">
-        <div className="inline-flex items-center gap-1.5 bg-secondary/40 text-comic-text px-4 py-1 rounded-comic-pill border border-comic-border text-sm font-heading font-extrabold">
+        <div className="inline-flex items-center gap-1.5 bg-secondary/30 text-comic-text px-4 py-1 rounded-comic-pill border border-secondary/50 text-xs font-heading font-extrabold tracking-[0.14em] uppercase">
           <Camera className="w-4 h-4 text-primary" />
           Scrapbook Kenangan
         </div>
-        <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-comic-text flex items-center justify-center gap-2">
+        <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-comic-text flex items-center justify-center gap-2 tracking-[-0.04em]">
           Momen Kebersamaan Kami
           <Sparkles className="w-6 h-6 text-accent hidden sm:inline-block" />
         </h2>
@@ -41,7 +41,7 @@ export default function PhotoGallery({ initialItems = defaultGallery as GalleryI
       </div>
 
       {/* Polaroid Masonry / Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-6 pt-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 sm:gap-5 pt-4">
         {initialItems.map((item, index) => (
           <GalleryItem
             key={item.id}

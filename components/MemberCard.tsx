@@ -23,7 +23,7 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
   // Badge configuration based on tier
   const badgeConfig = {
     mentor: {
-      label: '⭐ LEAD MENTOR',
+      label: 'PJK PROXY',
       bg: 'bg-secondary text-comic-text',
       border: 'border-secondary',
       icon: Star,
@@ -58,11 +58,14 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
               <img
                 src={member.avatarUrl}
                 alt={member.name}
+                onError={(event) => {
+                  event.currentTarget.style.display = 'none';
+                }}
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3.5 py-0.5 rounded-comic-pill bg-secondary border-2 border-comic-border shadow-comic-sm text-[11px] font-heading font-extrabold text-comic-text whitespace-nowrap">
-              Mentor Utama
+              PJK Proxy
             </div>
           </div>
 
@@ -143,6 +146,9 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
               <img
                 src={member.avatarUrl}
                 alt={member.name}
+                onError={(event) => {
+                  event.currentTarget.style.display = 'none';
+                }}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -256,6 +262,9 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
             <img
               src={member.avatarUrl}
               alt={member.name}
+              onError={(event) => {
+                event.currentTarget.style.display = 'none';
+              }}
               className="w-full h-full object-cover"
             />
           </div>

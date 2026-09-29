@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import PhotoFrame from '@/components/PhotoFrame';
 import About from '@/components/About';
 import PhotoGallery from '@/components/PhotoGallery';
 import TeamSection from '@/components/TeamSection';
@@ -10,6 +11,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col">
       <Navbar />
       <Hero />
+      <PhotoFrame />
       <About />
       <PhotoGallery />
       <TeamSection />

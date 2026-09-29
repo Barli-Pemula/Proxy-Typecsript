@@ -26,17 +26,17 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 sm:px-8 py-3.5 ${
         isScrolled
-          ? 'bg-cream/90 backdrop-blur-md py-2.5 border-b-2 border-comic-border shadow-comic-sm'
+          ? 'bg-cream/90 backdrop-blur-md py-2.5 border-b border-comic-border/20 shadow-comic-sm'
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto flex items-center justify-between">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Brand Logo */}
         <a
           href="#hero"
-          className="flex items-center gap-2.5 group bg-surface px-3.5 py-1.5 rounded-comic-sm border-comic border-comic-border shadow-comic hover:shadow-comic-md transition-all transform hover:-translate-y-0.5 active:translate-y-0.5"
+          className="flex items-center gap-2.5 group bg-surface/80 px-2.5 py-1.5 rounded-comic-sm border border-comic-border/20 shadow-comic-sm hover:shadow-comic transition-all transform hover:-translate-y-0.5 active:translate-y-0.5"
         >
-          <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center border-2 border-comic-border text-comic-text font-heading font-extrabold text-sm">
+          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center border border-primary text-white font-heading font-extrabold text-sm">
             TS
           </div>
           <span className="font-heading font-extrabold text-lg sm:text-xl text-comic-text tracking-tight flex items-center gap-1.5">
@@ -46,7 +46,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1 bg-surface/95 backdrop-blur-sm px-3 py-1.5 rounded-comic-pill border-comic border-comic-border shadow-comic">
+        <nav className="hidden md:flex items-center gap-1 bg-surface/90 backdrop-blur-sm px-2 py-1.5 rounded-comic-pill border border-comic-border/20 shadow-comic-sm">
           {navLinks.map((link) => {
             const Icon = link.icon;
             return (
@@ -66,10 +66,10 @@ export default function Navbar() {
         <div className="hidden md:block">
           <a
             href="#team"
-            className="flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-comic-sm font-heading font-bold text-sm border-comic border-comic-border shadow-comic hover:bg-primary-hover hover:shadow-comic-md transition-all transform hover:-translate-y-0.5 active:translate-y-0.5"
+            className="flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-comic-sm font-heading font-bold text-sm border border-primary shadow-comic hover:bg-primary-hover hover:shadow-comic-md transition-all transform hover:-translate-y-0.5 active:translate-y-0.5"
           >
             <Shield className="w-4 h-4" />
-            12 Member Tim
+            12 Calon Engineer
           </a>
         </div>
 

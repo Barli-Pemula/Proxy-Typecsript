@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { GalleryItemData } from '@/types';
-import { Sparkles, ZoomIn } from 'lucide-react';
+import { Camera, Sparkles, ZoomIn } from 'lucide-react';
 
 interface GalleryItemProps {
   item: GalleryItemData;
@@ -12,6 +12,7 @@ interface GalleryItemProps {
 
 export default function GalleryItem({ item, index, onClick }: GalleryItemProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   return (
     <div
@@ -34,7 +35,7 @@ export default function GalleryItem({ item, index, onClick }: GalleryItemProps) 
       <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-14 h-5 bg-secondary/80 border border-comic-border rounded-sm shadow-sm rotate-2 group-hover:rotate-0 transition-transform"></div>
 
       {/* Photo Container */}
-      <div className="relative w-full aspect-square bg-cream rounded-md overflow-hidden border-2 border-comic-border/80 flex items-center justify-center">
+      <div className="relative w-full aspect-video bg-cream rounded-md overflow-hidden border-2 border-comic-border/80 flex items-center justify-center">
         {/* Skeleton Shimmer */}
         {!imageLoaded && (
           <div className="absolute inset-0 bg-slate-200 animate-pulse flex items-center justify-center">
@@ -43,15 +44,26 @@ export default function GalleryItem({ item, index, onClick }: GalleryItemProps) 
         )}
 
         {/* Polaroid Image */}
-        <img
-          src={item.imageUrl}
-          alt={item.title}
-          loading="lazy"
-          onLoad={() => setImageLoaded(true)}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
-            imageLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-        />
+        {imageError ? (
+          <div className="flex h-full flex-col items-center justify-center gap-2 bg-primary-light px-4 text-center text-primary">
+            <Camera className="h-8 w-8" />
+            <span className="font-heading text-xs font-bold">Foto segera hadir</span>
+          </div>
+        ) : (
+          <img
+            src={item.imageUrl}
+            alt={item.title}
+            loading="lazy"
+            onLoad={() => setImageLoaded(true)}
+            onError={() => {
+              setImageError(true);
+              setImageLoaded(true);
+            }}
+            className={`w-full h-full object-cover transition-opacity duration-300 ${
+              imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+        )}
 
         {/* Hover Overlay with Zoom Icon */}
         <div className="absolute inset-0 bg-comic-border/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[1px]">
