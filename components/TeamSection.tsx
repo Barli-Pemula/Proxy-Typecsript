@@ -66,7 +66,7 @@ export default function TeamSection() {
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-secondary border border-comic-border"></span>
             <h3 className="font-heading font-extrabold text-xl text-comic-text tracking-tight">
-              Tier 1 — PJK Proxy
+              PJK Proxy
             </h3>
           </div>
           {mentor && (
@@ -79,7 +79,7 @@ export default function TeamSection() {
           <div className="flex items-center gap-2 justify-center">
             <span className="w-3 h-3 rounded-full bg-primary border border-comic-border"></span>
             <h3 className="font-heading font-extrabold text-xl text-comic-text tracking-tight">
-              Tier 2 — Ketua Proxy &amp; Project Lead
+              Ketua Proxy &amp; Project Lead
             </h3>
           </div>
           {ketua && (
@@ -92,7 +92,7 @@ export default function TeamSection() {
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-slate-300 border border-comic-border"></span>
             <h3 className="font-heading font-extrabold text-xl text-comic-text tracking-tight">
-              Tier 3 — 10 Anggota Inti
+              10 Anggota Inti
             </h3>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
