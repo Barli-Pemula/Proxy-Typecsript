@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-fredoka: 'Fredoka', cursive, sans-serif;
+    --font-nunito: 'Nunito', sans-serif;
+    --font-caveat: 'Caveat', cursive;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFF9F0;
+    color: #2D2D2D;
+  }
+
+  body {
+    font-family: var(--font-nunito), sans-serif;
+    background-color: #FFF9F0;
+    background-image: radial-gradient(#EADBC8 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #F5C542;
+    color: #2D2D2D;
+  }
+}
+
+/* Custom Comic Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9F0;
+  border-left: 2px solid #2D2D2D;
+}
+::-webkit-scrollbar-thumb {
+  background: #4A90E2;
+  border: 2px solid #2D2D2D;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #357ABD;
+}
+
+/* Comic Utility Classes */
+.comic-shadow {
+  box-shadow: 4px 4px 0px #2D2D2D;
+}
+.comic-shadow-lg {
+  box-shadow: 8px 8px 0px #2D2D2D;
+}
+.comic-border {
+  border: 2.5px solid #2D2D2D;
+}

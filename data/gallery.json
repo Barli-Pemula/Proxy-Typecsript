@@ -1,0 +1,66 @@
+[
+  {
+    "id": "g-01",
+    "title": "Juara 1 Hackathon Nasional 2026",
+    "date": "14 Februari 2026",
+    "imageUrl": "/gallery/photo-1.svg",
+    "caption": "Malam final 48 jam coding tanpa henti menghasilkan aplikasi solusi logistik terintegrasi.",
+    "tiltDegree": -3.5
+  },
+  {
+    "id": "g-02",
+    "title": "Workshop Next.js 14 & Cloud",
+    "date": "20 Januari 2026",
+    "imageUrl": "/gallery/photo-2.svg",
+    "caption": "Sesi sharing internal pengenalan Server Components dan Edge Functions.",
+    "tiltDegree": 3.8
+  },
+  {
+    "id": "g-03",
+    "title": "Pizza & Sprint Review Night",
+    "date": "05 Desember 2025",
+    "imageUrl": "/gallery/photo-3.svg",
+    "caption": "Diskusi arsitektur dan sprint review diiringi pizza hangat di markas Proxy Typescript.",
+    "tiltDegree": -2.0
+  },
+  {
+    "id": "g-04",
+    "title": "Demo Day Final Project",
+    "date": "18 November 2025",
+    "imageUrl": "/gallery/photo-4.svg",
+    "caption": "Presentasi showcase produk digital di depan dewan penguji dan stakeholders.",
+    "tiltDegree": 4.0
+  },
+  {
+    "id": "g-05",
+    "title": "Sesi Mentoring Teknis Dr. Budi",
+    "date": "10 Oktober 2025",
+    "imageUrl": "/gallery/photo-5.svg",
+    "caption": "Review mendalam arsitektur sistem dan standarisasi code base bersama Lead Mentor.",
+    "tiltDegree": -3.8
+  },
+  {
+    "id": "g-06",
+    "title": "Team Building & Outing Puncak",
+    "date": "24 Agustus 2025",
+    "imageUrl": "/gallery/photo-6.svg",
+    "caption": "Mempererat soliditas tim di luar rutinitas development melalui sesi rekreasi terarah.",
+    "tiltDegree": 2.5
+  },
+  {
+    "id": "g-07",
+    "title": "Code Camp & Git Workflow Sprint",
+    "date": "15 Juli 2025",
+    "imageUrl": "/gallery/photo-7.svg",
+    "caption": "Standarisasi Trunk-Based Development, CI/CD Pipeline, dan Conventional Commits.",
+    "tiltDegree": -3.0
+  },
+  {
+    "id": "g-08",
+    "title": "Perayaan 2 Tahun Berdiri",
+    "date": "01 Juni 2025",
+    "imageUrl": "/gallery/photo-8.svg",
+    "caption": "Refleksi perjalanan dua tahun berkarya dan penetapan target milestones tahun berikutnya.",
+    "tiltDegree": 3.2
+  }
+]
