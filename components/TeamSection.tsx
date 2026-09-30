@@ -1,46 +1,34 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Member } from '@/types';
 import defaultMembers from '@/data/members.json';
-import { getMembers } from '@/lib/storage';
 import MemberCard from './MemberCard';
-import PinModal from './PinModal';
-import EditForm from './EditForm';
-import { Users, Sparkles, Shield } from 'lucide-react';
+import MemberDetailModal, { AnimationType } from './MemberDetailModal';
+import { Sparkles, Shield, BookOpen } from 'lucide-react';
+
+const animationTypes: AnimationType[] = [
+  'comicPop',
+  'cardFlip3D',
+  'spiralUnfold',
+  'elasticBounce',
+  'zoomSlam',
+];
 
 export default function TeamSection() {
-  const [members, setMembers] = useState<Member[]>(defaultMembers as Member[]);
-  const [selectedMemberForPin, setSelectedMemberForPin] = useState<Member | null>(null);
-  const [selectedMemberForEdit, setSelectedMemberForEdit] = useState<Member | null>(null);
-
-  // Load from localStorage or Supabase on mount
-  useEffect(() => {
-    async function load() {
-      const data = await getMembers();
-      setMembers(data);
-    }
-    load();
-  }, []);
+  const members = defaultMembers as Member[];
+  const [selectedMember, setSelectedMember] = useState<Member | null>(null);
+  const [activeAnimation, setActiveAnimation] = useState<AnimationType>('comicPop');
 
   const mentor = members.find((m) => m.tier === 1) || members[0];
   const ketua = members.find((m) => m.tier === 2) || members[1];
   const anggotas = members.filter((m) => m.tier === 3);
 
-  const handleOpenEdit = (member: Member) => {
-    setSelectedMemberForPin(member);
-  };
-
-  const handlePinSuccess = (member: Member) => {
-    setSelectedMemberForPin(null);
-    setSelectedMemberForEdit(member);
-  };
-
-  const handleSaveSuccess = (updatedMember: Member) => {
-    setMembers((prev) =>
-      prev.map((m) => (m.id === updatedMember.id ? updatedMember : m))
-    );
-    setSelectedMemberForEdit(null);
+  const handleOpenDetail = (member: Member, index: number = 0) => {
+    // Pick different animation variant for each member so every card opening has a unique feel
+    const anim = animationTypes[index % animationTypes.length];
+    setActiveAnimation(anim);
+    setSelectedMember(member);
   };
 
   return (
@@ -52,11 +40,14 @@ export default function TeamSection() {
           Struktur Kelompok
         </div>
         <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-comic-text flex items-center justify-center gap-2 tracking-[-0.04em]">
-          Orang-orang di balik Proxy
+          Kartu Anggota Proxy
           <Sparkles className="w-6 h-6 text-secondary hidden sm:inline-block" />
         </h2>
-        <p className="font-body text-comic-muted text-base sm:text-lg max-w-2xl mx-auto">
-          Dua belas calon engineer yang belajar, bekerja kelompok, dan bertumbuh bersama. Klik tombol edit pada kartu untuk memperbarui profil (dilindungi 4-digit PIN).
+        <p className="font-body text-comic-muted text-base sm:text-lg max-w-2xl mx-auto flex items-center justify-center gap-2">
+          <BookOpen className="w-5 h-5 text-primary shrink-0" />
+          <span>
+            Halaman cover kartu menampilkan nama &amp; NIM. <strong>Ketuk kartu mana saja</strong> untuk membuka detail data lengkap dengan animasi interaktif!
+          </span>
         </p>
       </div>
 
@@ -70,7 +61,10 @@ export default function TeamSection() {
             </h3>
           </div>
           {mentor && (
-            <MemberCard member={mentor} onEditClick={handleOpenEdit} />
+            <MemberCard
+              member={mentor}
+              onOpenDetail={(m) => handleOpenDetail(m, 0)}
+            />
           )}
         </div>
 
@@ -83,7 +77,10 @@ export default function TeamSection() {
             </h3>
           </div>
           {ketua && (
-            <MemberCard member={ketua} onEditClick={handleOpenEdit} />
+            <MemberCard
+              member={ketua}
+              onOpenDetail={(m) => handleOpenDetail(m, 1)}
+            />
           )}
         </div>
 
@@ -92,35 +89,27 @@ export default function TeamSection() {
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-slate-300 border border-comic-border"></span>
             <h3 className="font-heading font-extrabold text-xl text-comic-text tracking-tight">
-              10 Anggota Inti
+              10 Anggota Kelompok
             </h3>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {anggotas.map((anggota) => (
+            {anggotas.map((anggota, idx) => (
               <MemberCard
                 key={anggota.id}
                 member={anggota}
-                onEditClick={handleOpenEdit}
+                onOpenDetail={(m) => handleOpenDetail(m, idx + 2)}
               />
             ))}
           </div>
         </div>
       </div>
 
-      {/* PIN Verification Dialog */}
-      <PinModal
-        isOpen={Boolean(selectedMemberForPin)}
-        member={selectedMemberForPin}
-        onSuccess={handlePinSuccess}
-        onClose={() => setSelectedMemberForPin(null)}
-      />
-
-      {/* Full Edit Form Modal */}
-      <EditForm
-        isOpen={Boolean(selectedMemberForEdit)}
-        member={selectedMemberForEdit}
-        onSaveSuccess={handleSaveSuccess}
-        onClose={() => setSelectedMemberForEdit(null)}
+      {/* Interactive Detail Modal (Isi Kartu) */}
+      <MemberDetailModal
+        isOpen={Boolean(selectedMember)}
+        member={selectedMember}
+        animationType={activeAnimation}
+        onClose={() => setSelectedMember(null)}
       />
     </section>
   );

@@ -3,6 +3,7 @@
     "id": "m-01",
     "slug": "ayubi-fathan",
     "name": "Ayubi Fathan",
+    "nim": "PJK-2026",
     "role": "mentor",
     "roleTitle": "PJK Kami",
     "birthDate": "12 Maret 1988",
@@ -13,13 +14,13 @@
     "audioUrl": "/audio/mentor-theme.mp3",
     "audioTitle": "Lo-Fi Deep Focus Beats",
     "cvUrl": "/cv/ayubi-fathan.pdf",
-    "pin": "1234",
     "tier": 1
   },
   {
     "id": "m-02",
     "slug": "barlian-athallah-dyu",
     "name": "Barlian Athallah Dyu",
+    "nim": "G6401221001",
     "role": "ketua",
     "roleTitle": "Ketua Proxy",
     "birthDate": "04 Agustus 2003",
@@ -30,13 +31,13 @@
     "audioUrl": "/audio/ketua-theme.mp3",
     "audioTitle": "Synthwave Cyber Hack",
     "cvUrl": "/cv/barlian-athallah-dyu.pdf",
-    "pin": "2203",
     "tier": 2
   },
   {
     "id": "m-03",
     "slug": "alviansyah-dewantara",
     "name": "Alviansyah Dewantara",
+    "nim": "G6401221002",
     "role": "anggota",
     "roleTitle": "Anggota Kelompok",
     "birthDate": "19 Januari 2004",
@@ -47,13 +48,13 @@
     "audioUrl": "/audio/member-1-theme.mp3",
     "audioTitle": "Playful Kawaii Pop",
     "cvUrl": "/cv/alviansyah-dewantara.pdf",
-    "pin": "3105",
     "tier": 3
   },
   {
     "id": "m-04",
     "slug": "caldero-loritz",
     "name": "Caldero Loritz",
+    "nim": "G6401221003",
     "role": "anggota",
     "roleTitle": "Anggota Kelompok",
     "birthDate": "27 Mei 2003",
@@ -64,13 +65,13 @@
     "audioUrl": "/audio/member-2-theme.mp3",
     "audioTitle": "8-Bit Arcade Groove",
     "cvUrl": "/cv/caldero-loritz.pdf",
-    "pin": "0408",
     "tier": 3
   },
   {
     "id": "m-05",
     "slug": "diva-wynne-athaya-kumaladjati",
     "name": "Diva Wynne Athaya Kumaladjati",
+    "nim": "G6401221004",
     "role": "anggota",
     "roleTitle": "Anggota Kelompok",
     "birthDate": "09 September 2004",
@@ -81,13 +82,13 @@
     "audioUrl": "/audio/member-3-theme.mp3",
     "audioTitle": "Chill Acoustic Guitar",
     "cvUrl": "/cv/diva-wynne-athaya-kumaladjati.pdf",
-    "pin": "3008",
     "tier": 3
   },
   {
     "id": "m-06",
     "slug": "fitri-aulia-rahmadhani",
     "name": "Fitri Aulia Rahmadhani",
+    "nim": "G6401221005",
     "role": "anggota",
     "roleTitle": "Anggota Kelompok",
     "birthDate": "14 Oktober 2003",
@@ -98,13 +99,13 @@
     "audioUrl": "/audio/member-4-theme.mp3",
     "audioTitle": "Ambient Deep Space",
     "cvUrl": "/cv/fitri-aulia-rahmadhani.pdf",
-    "pin": "2509",
     "tier": 3
   },
   {
     "id": "m-07",
     "slug": "m-ridwan-assayidi-nasution",
     "name": "M. Ridwan Assayidi Nasution",
+    "nim": "G6401221006",
     "role": "anggota",
     "roleTitle": "Anggota Kelompok",
     "birthDate": "02 Desember 2003",
@@ -115,13 +116,13 @@
     "audioUrl": "/audio/member-5-theme.mp3",
     "audioTitle": "Cyberpunk Heavy Bass",
     "cvUrl": "/cv/m-ridwan-assayidi-nasution.pdf",
-    "pin": "2411",
     "tier": 3
   },
   {
     "id": "m-08",
     "slug": "muhammad-baqir",
     "name": "Muhammad Baqir",
+    "nim": "G6401221007",
     "role": "anggota",
     "roleTitle": "Anggota Kelompok",
     "birthDate": "22 Juni 2004",
@@ -132,13 +133,13 @@
     "audioUrl": "/audio/member-6-theme.mp3",
     "audioTitle": "Morning Jazz Coffee",
     "cvUrl": "/cv/muhammad-baqir.pdf",
-    "pin": "1511",
     "tier": 3
   },
   {
     "id": "m-09",
     "slug": "muhammad-hanif-ihsan",
     "name": "Muhammad Hanif Ihsan",
+    "nim": "G6401221008",
     "role": "anggota",
     "roleTitle": "Anggota Kelompok",
     "birthDate": "15 November 2003",
@@ -149,13 +150,13 @@
     "audioUrl": "/audio/member-7-theme.mp3",
     "audioTitle": "Upbeat Funk Groove",
     "cvUrl": "/cv/muhammad-hanif-ihsan.pdf",
-    "pin": "0804",
     "tier": 3
   },
   {
     "id": "m-10",
     "slug": "nashtya-aqila-ramadhani",
     "name": "Nashtya Aqila Ramadhani",
+    "nim": "G6401221009",
     "role": "anggota",
     "roleTitle": "Anggota Kelompok",
     "birthDate": "03 Maret 2004",
@@ -166,13 +167,13 @@
     "audioUrl": "/audio/member-8-theme.mp3",
     "audioTitle": "Pastel City Pop",
     "cvUrl": "/cv/nashtya-aqila-ramadhani.pdf",
-    "pin": "2509",
     "tier": 3
   },
   {
     "id": "m-11",
     "slug": "syakiirah-adinda-salsabila",
     "name": "Syakiirah Adinda Salsabila",
+    "nim": "G6401221010",
     "role": "anggota",
     "roleTitle": "Anggota Kelompok",
     "birthDate": "18 Juli 2003",
@@ -183,13 +184,13 @@
     "audioUrl": "/audio/member-9-theme.mp3",
     "audioTitle": "Retro Synth Chiptune",
     "cvUrl": "/cv/syakiirah-adinda-salsabila.pdf",
-    "pin": "2108",
     "tier": 3
   },
   {
     "id": "m-12",
     "slug": "syaikhul-akbar",
     "name": "Syaikhul Akbar",
+    "nim": "G6401221011",
     "role": "anggota",
     "roleTitle": "Anggota Kelompok",
     "birthDate": "30 April 2004",
@@ -200,7 +201,6 @@
     "audioUrl": "/audio/member-10-theme.mp3",
     "audioTitle": "Bossa Nova Breezy",
     "cvUrl": "/cv/syaikhul-akbar.pdf",
-    "pin": "0212",
     "tier": 3
   }
 ]

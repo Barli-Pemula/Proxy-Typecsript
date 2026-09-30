@@ -4,6 +4,7 @@ export interface Member {
   id: string;
   slug: string;
   name: string;
+  nim: string;
   role: MemberRole;
   roleTitle: string;
   birthDate: string;
@@ -14,7 +15,6 @@ export interface Member {
   audioUrl: string;
   audioTitle: string;
   cvUrl: string;
-  pin: string; // 4-digit PIN for editing authentication
   tier: 1 | 2 | 3;
 }
 
