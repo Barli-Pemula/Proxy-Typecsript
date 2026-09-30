@@ -56,7 +56,7 @@ export default function About() {
             <strong>Proxy Typescript</strong> bukan perusahaan dan bukan sekadar nama kelompok. Proxy adalah tempat kami bertemu, bertukar cerita, mengerjakan tantangan, dan menemukan versi diri yang lebih berani untuk belajar teknologi.
           </p>
           <p className="font-body text-comic-text/85 text-base leading-relaxed">
-            Bersama <strong>1 PJK Proxy</strong>, <strong>1 Ketua Proxy</strong>, dan <strong>10 anggota inti</strong>, kami membangun kebiasaan kolaborasi yang hangat: diskusi yang hidup, kerja kelompok yang kompak, dan kenangan yang terus bertambah.
+            Bersama <strong>1 PJK Kami</strong>, <strong>1 Ketua Proxy</strong>, dan <strong>10 anggota inti</strong>, kami membangun kebiasaan kolaborasi yang hangat: diskusi yang hidup, kerja kelompok yang kompak, dan kenangan yang terus bertambah.
           </p>
         </div>
 

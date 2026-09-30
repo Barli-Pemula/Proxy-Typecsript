@@ -22,7 +22,7 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
   // Badge configuration based on tier
   const badgeConfig = {
     mentor: {
-      label: 'PJK PROXY',
+      label: 'PJK KAMI',
       bg: 'bg-secondary text-comic-text',
       border: 'border-secondary',
       icon: Star,
@@ -34,7 +34,7 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
       icon: Crown,
     },
     anggota: {
-      label: 'ANGGOTA INTI',
+      label: 'ANGGOTA KELOMPOK',
       bg: 'bg-slate-100 text-comic-text',
       border: 'border-slate-300',
       icon: User,
@@ -43,7 +43,7 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
 
   const BadgeIcon = badgeConfig.icon;
 
-  // Render Tier 1 (Lead Mentor) Layout
+  // Render Tier 1 (PJK Kami) Layout
   if (member.tier === 1) {
     return (
       <div className="relative group bg-surface rounded-comic p-6 sm:p-8 border-comic-thick border-comic-border shadow-comic-lg hover:shadow-comic-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
@@ -64,7 +64,7 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
               />
             </div>
             <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3.5 py-0.5 rounded-comic-pill bg-secondary border-2 border-comic-border shadow-comic-sm text-[11px] font-heading font-extrabold text-comic-text whitespace-nowrap">
-              PJK Proxy
+              PJK Kami
             </div>
           </div>
 

@@ -61,12 +61,12 @@ export default function TeamSection() {
       </div>
 
       <div className="space-y-12">
-        {/* Tier 1: PJK Proxy */}
+        {/* Tier 1: PJK Kami */}
         <div className="space-y-4">
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-secondary border border-comic-border"></span>
             <h3 className="font-heading font-extrabold text-xl text-comic-text tracking-tight">
-              PJK Proxy
+              PJK Kami
             </h3>
           </div>
           {mentor && (
@@ -79,7 +79,7 @@ export default function TeamSection() {
           <div className="flex items-center gap-2 justify-center">
             <span className="w-3 h-3 rounded-full bg-primary border border-comic-border"></span>
             <h3 className="font-heading font-extrabold text-xl text-comic-text tracking-tight">
-              Ketua Proxy &amp; Project Lead
+              Ketua Proxy
             </h3>
           </div>
           {ketua && (

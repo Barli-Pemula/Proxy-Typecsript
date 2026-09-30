@@ -26,7 +26,7 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   title: 'Proxy Typescript — About Us Kelompok Calon Engineer',
   description:
-    'About us Proxy Typescript: kelompok 12 calon engineer yang belajar, berkarya, dan bertumbuh bersama dalam 1 PJK Proxy, 1 Ketua Proxy, dan 10 anggota inti.',
+    'About us Proxy Typescript: kelompok 12 calon engineer yang belajar, berkarya, dan bertumbuh bersama dalam 1 PJK Kami, 1 Ketua Proxy, dan 10 anggota inti.',
   keywords: ['Proxy Typescript', 'Typescript', 'Software Engineering', 'Team Profile', 'Tech Proxy'],
   openGraph: {
     title: 'Proxy Typescript — About Us',

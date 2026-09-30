@@ -1,66 +1,66 @@
 [
   {
     "id": "g-01",
-    "title": "Juara 1 Hackathon Nasional 2026",
+    "title": "Kerja Kelompok Perdana",
     "date": "14 Februari 2026",
     "imageUrl": "/gallery/photo-1.svg",
-    "caption": "Malam final 48 jam coding tanpa henti menghasilkan aplikasi solusi logistik terintegrasi.",
+    "caption": "Momen pertama kumpul bareng untuk ngebahas tugas dan pembagian peran anggota kelompok.",
     "tiltDegree": -3.5
   },
   {
     "id": "g-02",
-    "title": "Workshop Next.js 14 & Cloud",
+    "title": "Sesi Belajar & Diskusi Bareng",
     "date": "20 Januari 2026",
     "imageUrl": "/gallery/photo-2.svg",
-    "caption": "Sesi sharing internal pengenalan Server Components dan Edge Functions.",
+    "caption": "Belajar bareng coding dan saling bantu kalau ada materi yang masih belum dipahami.",
     "tiltDegree": 3.8
   },
   {
     "id": "g-03",
-    "title": "Pizza & Sprint Review Night",
+    "title": "Makan Pizza Sambil Ngerjain Tugas",
     "date": "05 Desember 2025",
     "imageUrl": "/gallery/photo-3.svg",
-    "caption": "Diskusi arsitektur dan sprint review diiringi pizza hangat di markas Proxy Typescript.",
+    "caption": "Biar nggak pusing mikir tugas kelompok, kita pesen pizza bareng sambil ngobrol santai.",
     "tiltDegree": -2.0
   },
   {
     "id": "g-04",
-    "title": "Demo Day Final Project",
+    "title": "Presentasi Tugas Kelompok",
     "date": "18 November 2025",
     "imageUrl": "/gallery/photo-4.svg",
-    "caption": "Presentasi showcase produk digital di depan dewan penguji dan stakeholders.",
+    "caption": "Presentasi hasil karya dan progres project kelompok di depan kelas dengan lancar.",
     "tiltDegree": 4.0
   },
   {
     "id": "g-05",
-    "title": "Sesi belajar bersama PJK Proxy",
+    "title": "Bimbingan Bareng PJK Kami",
     "date": "10 Oktober 2025",
     "imageUrl": "/gallery/photo-5.svg",
-    "caption": "Membedah ide, bertukar cerita, dan saling menguatkan bersama PJK Proxy.",
+    "caption": "Sesi konsultasi, sharing, dan dapet banyak arahan berharga dari PJK kami, Kak Ayubi Fathan.",
     "tiltDegree": -3.8
   },
   {
     "id": "g-06",
-    "title": "Team Building & Outing Puncak",
+    "title": "Jalan-Jalan & Refreshing Bareng",
     "date": "24 Agustus 2025",
     "imageUrl": "/gallery/photo-6.svg",
-    "caption": "Mempererat soliditas tim di luar rutinitas development melalui sesi rekreasi terarah.",
+    "caption": "Lepas penat sehabis ngerjain tugas, jalan bareng biar kelompok makin akrab dan kompak.",
     "tiltDegree": 2.5
   },
   {
     "id": "g-07",
-    "title": "Code Camp & Git Workflow Sprint",
+    "title": "Ngebut Selesaiin Project",
     "date": "15 Juli 2025",
     "imageUrl": "/gallery/photo-7.svg",
-    "caption": "Standarisasi Trunk-Based Development, CI/CD Pipeline, dan Conventional Commits.",
+    "caption": "Kumpul bareng ngerapihin tugas akhir kelompok sampai benar-benar beres dan siap kumpul.",
     "tiltDegree": -3.0
   },
   {
     "id": "g-08",
-    "title": "Perayaan 2 Tahun Berdiri",
+    "title": "Foto Bareng Tim Lengkap",
     "date": "01 Juni 2025",
     "imageUrl": "/gallery/photo-8.svg",
-    "caption": "Refleksi perjalanan dua tahun berkarya dan penetapan target milestones tahun berikutnya.",
+    "caption": "Momen kebersamaan 12 anggota kelompok Proxy Typescript yang selalu kompak dan solid.",
     "tiltDegree": 3.2
   }
 ]

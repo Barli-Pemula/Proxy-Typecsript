@@ -110,7 +110,7 @@ export default function Hero() {
         <div className="pt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-heading font-semibold text-comic-text">
           <div className="flex items-center gap-2 bg-surface/90 px-3.5 py-1.5 rounded-comic-pill border border-comic-border shadow-comic-sm">
             <span className="w-3 h-3 rounded-full bg-secondary border border-comic-border"></span>
-            <span>1 PJK Proxy</span>
+            <span>1 PJK Kami</span>
           </div>
           <div className="flex items-center gap-2 bg-surface/90 px-3.5 py-1.5 rounded-comic-pill border border-comic-border shadow-comic-sm">
             <span className="w-3 h-3 rounded-full bg-primary border border-comic-border"></span>

@@ -137,8 +137,8 @@ export default function PinModal({
             </div>
           </form>
 
-          <p className="text-[11px] font-heading text-comic-muted bg-cream p-2 rounded border border-comic-border/50">
-            💡 <em>Demo Hint: PIN default adalah <strong>{member.pin}</strong></em>
+          <p className="text-[11px] font-heading text-comic-muted">
+            🔒 Masukkan 4-digit PIN rahasia untuk mengedit profil.
           </p>
         </div>
       </div>
