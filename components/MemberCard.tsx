@@ -11,6 +11,7 @@ import {
   UtensilsCrossed,
   Pencil,
   Quote,
+  FileText,
 } from 'lucide-react';
 
 interface MemberCardProps {
@@ -43,7 +44,7 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
 
   const BadgeIcon = badgeConfig.icon;
 
-  // Render Tier 1 (PJK Kami) Layout
+  // Render Tier 1 (PJK Kami) Layout — Khusus PJK TANPA tombol CV
   if (member.tier === 1) {
     return (
       <div className="relative group bg-surface rounded-comic p-6 sm:p-8 border-comic-thick border-comic-border shadow-comic-lg hover:shadow-comic-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
@@ -81,7 +82,7 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
                 </h3>
               </div>
 
-              {/* Action Buttons */}
+              {/* Action Buttons: Khusus PJK hanya tombol Edit */}
               <div className="flex items-center gap-2">
                 <button
                   type="button"
@@ -124,7 +125,7 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
     );
   }
 
-  // Render Tier 2 (Ketua Proxy) Layout
+  // Render Tier 2 (Ketua Proxy) Layout — Lengkap dengan tombol Lihat CV
   if (member.tier === 2) {
     return (
       <div className="relative group bg-surface rounded-comic p-6 sm:p-7 border-comic-thick border-comic-border shadow-comic-lg hover:shadow-comic-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden max-w-4xl mx-auto">
@@ -159,8 +160,20 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
                 </h3>
               </div>
 
-              {/* Action Buttons */}
+              {/* Action Buttons: Tombol CV & Edit */}
               <div className="flex items-center gap-2">
+                {member.cvUrl && (
+                  <a
+                    href={member.cvUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 bg-secondary text-comic-text px-3 py-1.5 rounded-comic-sm border-2 border-comic-border shadow-comic-sm text-xs font-heading font-bold hover:bg-secondary-hover active:translate-y-0.5 transition-all"
+                    aria-label={`Lihat CV ${member.name}`}
+                  >
+                    <FileText className="w-3.5 h-3.5 text-comic-text" />
+                    <span>Lihat CV</span>
+                  </a>
+                )}
                 <button
                   type="button"
                   onClick={() => onEditClick(member)}
@@ -201,7 +214,7 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
     );
   }
 
-  // Render Tier 3 (10 Anggota Inti) Layout
+  // Render Tier 3 (10 Anggota Inti) Layout — Lengkap dengan tombol Lihat CV
   return (
     <div className="group relative bg-surface rounded-comic p-5 border-comic border-comic-border shadow-comic hover:shadow-comic-lg hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
       <div className="space-y-3.5">
@@ -213,6 +226,18 @@ export default function MemberCard({ member, onEditClick }: MemberCardProps) {
           </span>
 
           <div className="flex items-center gap-1.5">
+            {member.cvUrl && (
+              <a
+                href={member.cvUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1.5 rounded-comic-sm bg-cream border border-comic-border text-comic-text hover:bg-secondary/40 active:translate-y-0.5 transition-all"
+                title="Lihat CV"
+                aria-label={`Lihat CV ${member.name}`}
+              >
+                <FileText className="w-3.5 h-3.5 text-primary" />
+              </a>
+            )}
             <button
               type="button"
               onClick={() => onEditClick(member)}
