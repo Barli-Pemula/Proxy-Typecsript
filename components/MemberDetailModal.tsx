@@ -15,6 +15,7 @@ import {
   FileText,
   Sparkles,
   IdCard,
+  ExternalLink,
 } from 'lucide-react';
 import AudioPlayer from './AudioPlayer';
 
@@ -143,6 +144,21 @@ const animationVariants: Record<AnimationType, any> = {
   },
 };
 
+function getSpotifyEmbedUrl(spotifyUrl: string) {
+  try {
+    const url = new URL(spotifyUrl);
+    const trackId = url.pathname.split('/').filter(Boolean).pop();
+
+    if (!trackId || !['open.spotify.com', 'spotify.com'].includes(url.hostname)) {
+      return null;
+    }
+
+    return `https://open.spotify.com/embed/track/${trackId}?utm_source=generator`;
+  } catch {
+    return null;
+  }
+}
+
 export default function MemberDetailModal({
   isOpen,
   member,
@@ -195,6 +211,7 @@ export default function MemberDetailModal({
 
   const BadgeIcon = roleBadge.icon;
   const currentVariant = animationVariants[animationType] || animationVariants.comicPop;
+  const spotifyEmbedUrl = member.spotifyEmbedUrl || (member.spotifyUrl ? getSpotifyEmbedUrl(member.spotifyUrl) : null);
 
   // Rule: Show CV button for Ketua and 10 Anggota, EXCLUDE for PJK Kami (tier === 1)
   const showCvButton = member.tier !== 1 && Boolean(member.cvUrl);
@@ -321,7 +338,29 @@ export default function MemberDetailModal({
             </div>
 
             {/* Mini Audio Theme Beats */}
-            {member.audioUrl && (
+            {spotifyEmbedUrl ? (
+              <div className="pt-1">
+                <iframe
+                  src={spotifyEmbedUrl}
+                  title={`Putar ${member.audioTitle} di Spotify`}
+                  width="100%"
+                  height="80"
+                  scrolling="no"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  className="rounded-comic-sm border-2 border-comic-border"
+                />
+                <a
+                  href={member.spotifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-heading text-xs font-bold text-comic-muted hover:text-primary transition-colors"
+                >
+                  <ExternalLink className="h-3.5 w-3.5" />
+                  Buka di Spotify jika player tidak tersedia
+                </a>
+              </div>
+            ) : member.audioUrl ? (
               <div className="pt-1">
                 <AudioPlayer
                   memberId={member.id}
@@ -329,7 +368,7 @@ export default function MemberDetailModal({
                   audioTitle={member.audioTitle}
                 />
               </div>
-            )}
+            ) : null}
 
             {/* Action Bar (CV Button for non-PJK & Close Button) */}
             <div className="flex items-center justify-end gap-3 pt-3 border-t-2 border-comic-border">

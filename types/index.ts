@@ -14,6 +14,8 @@ export interface Member {
   avatarUrl: string;
   audioUrl: string;
   audioTitle: string;
+  spotifyUrl?: string;
+  spotifyEmbedUrl?: string;
   cvUrl: string;
   tier: 1 | 2 | 3;
 }

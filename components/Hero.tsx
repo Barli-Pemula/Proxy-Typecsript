@@ -57,7 +57,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="font-heading font-semibold text-lg sm:text-xl text-comic-muted tracking-tight max-w-2xl mx-auto">
-            &ldquo;Belajar, Berkarya, Bertumbuh Bersama&rdquo;
+            &ldquo;Proxy Tipe Kamu !!!&rdquo;
           </p>
         </div>
 
