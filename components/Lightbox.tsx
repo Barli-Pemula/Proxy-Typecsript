@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { GalleryItemData } from '@/types';
-import { X, ChevronLeft, ChevronRight, Calendar, Sparkles } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 
 interface LightboxProps {
   isOpen: boolean;
@@ -104,10 +104,6 @@ export default function Lightbox({
 
           {/* Caption & Metadata */}
           <div className="w-full text-center space-y-2 bg-cream p-4 rounded-comic-sm border-2 border-comic-border">
-            <div className="inline-flex items-center gap-1.5 text-xs font-heading font-bold text-comic-muted">
-              <Calendar className="w-4 h-4 text-primary" />
-              {item.date}
-            </div>
             <h3 className="font-heading font-extrabold text-xl sm:text-2xl text-comic-text">
               {item.title}
             </h3>

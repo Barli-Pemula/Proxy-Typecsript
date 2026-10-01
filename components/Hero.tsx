@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { ArrowRight, Terminal, Sparkles, Shield, Users, Layers, Code2 } from 'lucide-react';
-import RocketAnimation from './RocketAnimation';
 
 export default function Hero() {
   return (
@@ -43,11 +42,6 @@ export default function Hero() {
 
       {/* CENTERED HERO CONTENT */}
       <div className="hero-stagger max-w-5xl mx-auto w-full flex flex-col items-center text-center space-y-6 relative z-10">
-        {/* Animated Rocket Launch on Landing */}
-        <div className="mb-2">
-          <RocketAnimation />
-        </div>
-
         {/* Top Pill Badge */}
         <div className="inline-flex items-center gap-2 bg-primary-light px-4 py-1.5 rounded-comic-pill border border-primary/20 text-xs sm:text-sm font-heading font-bold text-primary tracking-wide">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>

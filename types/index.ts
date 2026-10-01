@@ -21,7 +21,6 @@ export interface Member {
 export interface GalleryItemData {
   id: string;
   title: string;
-  date: string;
   imageUrl: string;
   caption: string;
   tiltDegree: number; // e.g., -4 to +4

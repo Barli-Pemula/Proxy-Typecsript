@@ -36,12 +36,20 @@ export default function GalleryItem({ item, index, onClick }: GalleryItemProps) 
 
       {/* Photo Container */}
       <div className="relative w-full aspect-video bg-cream rounded-md overflow-hidden border-2 border-comic-border/80 flex items-center justify-center">
-        {/* Skeleton Shimmer */}
-        {!imageLoaded && (
-          <div className="absolute inset-0 bg-slate-200 animate-pulse flex items-center justify-center">
-            <Sparkles className="w-8 h-8 text-slate-400 animate-spin" />
-          </div>
-        )}
+          {imageError ? (
+            <div className="flex h-full flex-col items-center justify-center gap-2 bg-primary-light px-4 text-center text-primary">
+              <Camera className="h-8 w-8" />
+              <span className="font-heading text-xs font-bold">Foto segera hadir</span>
+            </div>
+          ) : (
+            <img
+              src={item.imageUrl}
+              alt={item.title}
+              loading="lazy"
+              onError={() => setImageError(true)}
+              className="w-full h-full object-cover"
+            />
+          )}
 
         {/* Polaroid Image */}
         {imageError ? (
@@ -59,9 +67,7 @@ export default function GalleryItem({ item, index, onClick }: GalleryItemProps) 
               setImageError(true);
               setImageLoaded(true);
             }}
-            className={`w-full h-full object-cover transition-opacity duration-300 ${
-              imageLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
+            className="w-full h-full object-cover"
           />
         )}
 
@@ -78,8 +84,8 @@ export default function GalleryItem({ item, index, onClick }: GalleryItemProps) 
         <h4 className="font-heading font-bold text-sm sm:text-base text-comic-text line-clamp-1">
           {item.title}
         </h4>
-        <p className="font-quote text-comic-muted text-base sm:text-lg font-bold leading-none">
-          {item.date}
+        <p className="font-body text-comic-muted text-xs sm:text-sm leading-snug line-clamp-2">
+          {item.caption}
         </p>
       </div>
     </div>

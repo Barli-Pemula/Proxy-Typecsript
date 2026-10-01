@@ -1,6 +1,7 @@
 'use client';
 
-import { Camera, Sparkles } from 'lucide-react';
+import Image from 'next/image';
+import { Sparkles } from 'lucide-react';
 
 export default function PhotoFrame() {
   return (
@@ -11,15 +12,17 @@ export default function PhotoFrame() {
           <div className="absolute -left-4 top-10 rotate-[-18deg] text-3xl text-primary">✦</div>
           <div className="absolute -right-3 bottom-14 rotate-[16deg] text-2xl text-primary">✦</div>
           <div className="relative aspect-video overflow-hidden rounded-comic-sm border-comic border-comic-border bg-primary-light">
-            <div className="flex h-full items-center justify-center text-primary">
-              <div className="flex h-16 w-16 rotate-[-6deg] items-center justify-center rounded-comic-sm border-comic border-comic-border bg-surface/70 shadow-comic-sm">
-                <Camera className="h-7 w-7" />
-              </div>
-            </div>
+            <Image
+              src="/foto-perjuangan.jpg"
+              alt="Kebersamaan ILkomerz dalam sebuah momen perayaan"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
           </div>
           <div className="flex items-center justify-between px-1 pt-3 font-heading text-[11px] font-bold uppercase tracking-[0.16em] text-surface/70">
             <span>Proxy Typescript</span>
-            <span>2026</span>
           </div>
         </div>
 
@@ -29,10 +32,10 @@ export default function PhotoFrame() {
             Bingkai kenangan
           </div>
           <h2 className="font-heading text-3xl font-extrabold tracking-[-0.04em] text-comic-text sm:text-4xl">
-            Satu ruang untuk momen Proxy berikutnya.
+            Mengubah Perjuangan menjadi Indah Bersama Kami
           </h2>
           <p className="font-body text-base leading-relaxed text-comic-muted">
-            Bingkai ini siap diisi dengan foto yang paling ingin kamu simpan bersama kelompok.
+            Percaya untuk bertumbuh bersama, berproses bersama, saling bahu-membahu untuk mencapai tujuan dan menjadi ILkomerz sejati
           </p>
         </div>
       </div>
