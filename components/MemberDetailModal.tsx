@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Member } from '@/types';
+import { getImageUrl } from '@/lib/utils';
 import {
   X,
   Crown,
@@ -266,7 +267,7 @@ export default function MemberDetailModal({
               <div className="relative shrink-0">
                 <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-comic-sm bg-cream border-comic border-comic-border overflow-hidden shadow-comic">
                   <img
-                    src={member.avatarUrl}
+                    src={getImageUrl(member.avatarUrl)}
                     alt={member.name}
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';

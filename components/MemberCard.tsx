@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Member } from '@/types';
+import { getImageUrl } from '@/lib/utils';
 import {
   Crown,
   Star,
@@ -72,7 +73,7 @@ export default function MemberCard({ member, onOpenDetail }: MemberCardProps) {
             <div className="relative shrink-0">
               <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-secondary-light border-comic-thick border-comic-border overflow-hidden shadow-comic group-hover:scale-105 group-hover:rotate-2 transition-all">
                 <img
-                  src={member.avatarUrl}
+                  src={getImageUrl(member.avatarUrl)}
                   alt={member.name}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
@@ -136,7 +137,7 @@ export default function MemberCard({ member, onOpenDetail }: MemberCardProps) {
             <div className="relative shrink-0">
               <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-primary-light border-comic-thick border-comic-border overflow-hidden shadow-comic group-hover:scale-105 group-hover:-rotate-2 transition-all">
                 <img
-                  src={member.avatarUrl}
+                  src={getImageUrl(member.avatarUrl)}
                   alt={member.name}
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
@@ -204,7 +205,7 @@ export default function MemberCard({ member, onOpenDetail }: MemberCardProps) {
         <div className="flex flex-col items-center text-center">
           <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-comic-sm bg-cream border-comic border-comic-border overflow-hidden shadow-comic-sm group-hover:scale-105 group-hover:-rotate-2 transition-all mb-2.5">
             <img
-              src={member.avatarUrl}
+              src={getImageUrl(member.avatarUrl)}
               alt={member.name}
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
