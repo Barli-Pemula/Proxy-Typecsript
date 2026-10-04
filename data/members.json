@@ -108,20 +108,21 @@
     "tier": 3
   },
   {
-    "id": "m-07",
+   "id": "m-07",
     "slug": "m-ridwan-assayyidi-nasution",
     "name": "M. Ridwan Assayyidi Nasution",
     "nim": "M0403251020",
     "role": "anggota",
     "roleTitle": "Anggota Kelompok",
     "birthDate": "24 November 2006",
-    "prodi": "Ilmu KKomputer 62",
-    "favoriteFood": "Martabak Telur Spesial",
+    "prodi": "Ilmu Komputer 62",
+    "favoriteFood": "Kebab Daging 4 Lapis",
     "motivationQuote": "[AR] is the reason this heart still beats!",
     "avatarUrl": "/avatars/member-5.svg",
-    "audioUrl": "/audio/member-5-theme.mp3",
-    "audioTitle": "Cyberpunk Heavy Bass",
-    "cvUrl": "/cv/m-ridwan-assayidi-nasution.pdf",
+    "audioTitle": "Alpine Blue - Annabel",
+    "spotifyUrl": "https://open.spotify.com/track/7HhhB6pmPWGBLCEASBEEes?si=e8e79c31baf74a96",
+    "spotifyEmbedUrl": "https://open.spotify.com/embed/track/7HhhB6pmPWGBLCEASBEEes?utm_source=generator&si=2b12c83fc1554f4d",
+    "cvUrl": "https://drive.google.com/file/d/1fH-aNoIVMslngNFdQvHYiXZONVXO_5aR/view?usp=drive_link",
     "tier": 3
   },
   {
