@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Member } from '@/types';
-import { getImageUrl } from '@/lib/utils';
+import { getImageUrl, getMemberRole } from '@/lib/utils';
 import {
   X,
   Crown,
@@ -185,6 +185,8 @@ export default function MemberDetailModal({
 
   if (!isOpen || !member) return null;
 
+  const memberRole = getMemberRole(member);
+
   // Role badge setup
   const roleBadge = {
     mentor: {
@@ -208,7 +210,7 @@ export default function MemberDetailModal({
       accentBorder: 'border-comic-border',
       badgeColor: 'bg-slate-200 text-comic-text',
     },
-  }[member.role];
+  }[memberRole];
 
   const BadgeIcon = roleBadge.icon;
   const currentVariant = animationVariants[animationType] || animationVariants.comicPop;

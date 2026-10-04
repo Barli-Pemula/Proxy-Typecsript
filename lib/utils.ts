@@ -1,5 +1,6 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import type { Member, MemberRole } from "@/types";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -15,4 +16,10 @@ export function getImageUrl(url: string) {
   }
 
   return url;
+}
+
+export function getMemberRole(member: Pick<Member, "role" | "tier">): MemberRole {
+  if (member.role === "ketua") return "ketua";
+  if (member.role === "anggota") return "anggota";
+  return member.tier === 1 ? "mentor" : "anggota";
 }

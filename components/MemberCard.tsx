@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Member } from '@/types';
-import { getImageUrl } from '@/lib/utils';
+import { getImageUrl, getMemberRole } from '@/lib/utils';
 import {
   Crown,
   Star,
@@ -18,6 +18,8 @@ interface MemberCardProps {
 }
 
 export default function MemberCard({ member, onOpenDetail }: MemberCardProps) {
+  const memberRole = getMemberRole(member);
+
   // Badge configuration based on role
   const badgeConfig = {
     mentor: {
@@ -44,7 +46,7 @@ export default function MemberCard({ member, onOpenDetail }: MemberCardProps) {
       glow: 'hover:shadow-accent/20',
       accentColor: 'text-accent',
     },
-  }[member.role];
+  }[memberRole];
 
   const BadgeIcon = badgeConfig.icon;
 
